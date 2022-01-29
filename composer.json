@@ -10,6 +10,7 @@
     },
     "require-dev": {
         "chadicus/coding-standard": "^1.8",
+        "laminas/laminas-diactoros": "^1.8",
         "phing/phing": "^2.16",
         "php-coveralls/php-coveralls": "^2.5",
         "phpunit/phpunit": "^6.1"
