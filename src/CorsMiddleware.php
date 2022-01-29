@@ -9,6 +9,21 @@ use Psr\Http\Server\RequestHandlerInterface;
 
 final class CorsMiddleware implements MiddlewareInterface
 {
+    use DoublePassCompatibilityTrait;
+
+    /**
+     * @var string
+     */
+    private $origin;
+
+    /**
+     * @param string $origin The origin from which responses can be shared.
+     */
+    public function __construct(string $origin = '*')
+    {
+        $this->origin = $origin;
+    }
+
     /**
      * Process an incoming server request.
      *
@@ -20,6 +35,6 @@ final class CorsMiddleware implements MiddlewareInterface
     public function process(ServerRequestInterface $request, RequestHandlerInterface $handler) : ResponseInterface
     {
         return $handler->handle($request)
-            ->withHeader('Access-Control-Allow-Origin', '*');
+            ->withHeader('Access-Control-Allow-Origin', $this->origin);
     }
 }
