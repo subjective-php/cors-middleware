@@ -41,5 +41,4 @@ final class DoublePassRequestHandler implements RequestHandlerInterface
     {
         return ($this->delegate)($request, $this->response);
     }
-
 }
