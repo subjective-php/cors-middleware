@@ -1,0 +1,34 @@
+{
+    "name": "subjective-php/cors-middleware",
+    "description": "Middleware to assist with CORS implementation",
+    "license": "MIT",
+    "require": {
+        "php": "^7.0",
+        "fig/http-message-util": "^1.1",
+        "psr/http-message": "^1.0",
+        "psr/http-server-middleware": "^1.0"
+    },
+    "require-dev": {
+        "chadicus/coding-standard": "^1.8",
+        "phing/phing": "^2.16",
+        "php-coveralls/php-coveralls": "^2.5",
+        "phpunit/phpunit": "^6.1"
+    },
+    "config" : {
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "SubjectivePHP\\Middleware\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SubjectivePHPTest\\Middleware\\": "tests"
+        }
+    },
+    "scripts": {
+        "lint": "vendor/bin/phing phpcs",
+        "test": "vendor/bin/phing phpunit"
+    }
+}
