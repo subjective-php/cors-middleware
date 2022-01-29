@@ -11,7 +11,6 @@
     "require-dev": {
         "chadicus/coding-standard": "dev-master",
         "laminas/laminas-diactoros": "^1.8",
-        "phing/phing": "2.16.3",
         "php-coveralls/php-coveralls": "^2.5",
         "phpunit/phpunit": "^6.1"
     },
@@ -29,7 +28,7 @@
         }
     },
     "scripts": {
-        "lint": "vendor/bin/phing phpcs",
-        "test": "vendor/bin/phing phpunit"
+        "lint": "vendor/bin/phpcs",
+        "test": "vendor/bin/phpunit"
     }
 }
