@@ -4,7 +4,7 @@
     <file>tests</file>
     <arg name="colors" />
     <arg value="p" />
-    <rule ref="./vendor/chadicus/coding-standard/Chadicus" />
+    <rule ref="PSR2" />
     <arg name="report-full" />
 </ruleset>
 
